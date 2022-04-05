@@ -17,8 +17,7 @@
 
 # Dependencies
 
-- `bash`, `curl`, `tar`: generic POSIX utilities.
-- `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
+- `bash`, `curl`, `tar`, `gunzip`: generic POSIX utilities.
 
 # Install
 
@@ -27,7 +26,7 @@ Plugin:
 ```shell
 asdf plugin add aws-mfa-login
 # or
-asdf plugin add aws-mfa-login https://github.com/karlderkaefer/asdf-aws-mfa-login.git
+asdf plugin add aws-mfa-login https://github.com/signavio/asdf-aws-mfa-login.git
 ```
 
 aws-mfa-login:
@@ -53,7 +52,7 @@ install & manage versions.
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 
-[Thanks goes to these contributors](https://github.com/karlderkaefer/asdf-aws-mfa-login/graphs/contributors)!
+[Thanks goes to these contributors](https://github.com/signavio/asdf-aws-mfa-login/graphs/contributors)!
 
 ## Testing
 ```bash
@@ -63,4 +62,4 @@ asdf plugin-test aws-mfa-login https://github.com/signavio/asdf-aws-mfa-login --
 
 # License
 
-See [LICENSE](LICENSE) © [karlderkaefer](https://github.com/karlderkaefer/)
+See [LICENSE](LICENSE) © [signavio](https://github.com/signavio/)
