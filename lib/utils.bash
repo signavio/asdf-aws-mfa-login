@@ -37,15 +37,27 @@ list_all_versions() {
 }
 
 download_release() {
-  local version filename url
+  local version filename url platform arch
+
   version="$1"
   filename="$2"
 
+  platform="$(uname | tr '[:upper:]' '[:lower:]')"
+  if [[  ! (${platform} == linux || ${platform} == darwin) ]]; then
+    fail "Unsupported platform '${platform}' found. Only Linux and Darwin are supported."
+  fi
+
+  case $(uname -m) in
+      x86_64) arch="amd64" ;;
+      arm64) arch="arm64" ;;
+  esac
+
   # TODO: Adapt the release URL convention for aws-mfa-login
-  url="$GH_REPO/archive/v${version}.gz"
+  # https://github.com/signavio/aws-mfa-login/releases/download/v0.1.11/aws-mfa-login_darwin_amd64.gz
+  url="$GH_REPO/releases/download/v${version}/${TOOL_NAME}_${platform}_${arch}.gz"
 
   echo "* Downloading $TOOL_NAME release $version..."
-  curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
+  curl "${curl_opts[@]}" -o "$filename" "$url" || fail "Could not download $url"
 }
 
 install_version() {
@@ -59,6 +71,7 @@ install_version() {
 
   (
     mkdir -p "$install_path"
+    echo "install path"
     cp -r "$ASDF_DOWNLOAD_PATH"/* "$install_path"
 
     # TODO: Asert aws-mfa-login executable exists.
@@ -72,3 +85,5 @@ install_version() {
     fail "An error ocurred while installing $TOOL_NAME $version."
   )
 }
+
+list_all_versions

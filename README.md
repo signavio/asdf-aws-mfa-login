@@ -55,6 +55,12 @@ Contributions of any kind welcome! See the [contributing guide](contributing.md)
 
 [Thanks goes to these contributors](https://github.com/karlderkaefer/asdf-aws-mfa-login/graphs/contributors)!
 
+## Testing
+```bash
+asdf plugin-test aws-mfa-login https://github.com/signavio/asdf-aws-mfa-login --asdf-tool-version latest --asdf-plugin-gitref $(git rev-parse HEAD) aws-mfa-login --version
+```
+
+
 # License
 
 See [LICENSE](LICENSE) © [karlderkaefer](https://github.com/karlderkaefer/)
