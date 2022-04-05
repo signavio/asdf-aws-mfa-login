@@ -17,11 +17,9 @@ release_file="${release_file_extracted}.gz"
 # Download tar.gz file to the download directory
 download_release "$ASDF_INSTALL_VERSION" "$release_file"
 
-
 #  Extract contents of tar.gz file into the download directory
-gunzip -c "${release_file}" > "${release_file_extracted}" || fail "Could not extract $release_file"
+gunzip -c "${release_file}" >"${release_file_extracted}" || fail "Could not extract $release_file"
 chmod +x "$release_file_extracted"
-
 
 # Remove the tar.gz file since we don't need to keep it
 rm "$release_file"
