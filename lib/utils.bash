@@ -43,13 +43,13 @@ download_release() {
   filename="$2"
 
   platform="$(uname | tr '[:upper:]' '[:lower:]')"
-  if [[  ! (${platform} == linux || ${platform} == darwin) ]]; then
+  if [[ ! (${platform} == linux || ${platform} == darwin) ]]; then
     fail "Unsupported platform '${platform}' found. Only Linux and Darwin are supported."
   fi
 
   case $(uname -m) in
-      x86_64) arch="amd64" ;;
-      arm64) arch="arm64" ;;
+  x86_64) arch="amd64" ;;
+  arm64) arch="arm64" ;;
   esac
 
   # TODO: Adapt the release URL convention for aws-mfa-login
