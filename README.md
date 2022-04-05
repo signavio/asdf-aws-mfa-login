@@ -1,6 +1,6 @@
 <div align="center">
 
-# asdf-aws-mfa-login [![Build](https://github.com/karlderkaefer/asdf-aws-mfa-login/actions/workflows/build.yml/badge.svg)](https://github.com/karlderkaefer/asdf-aws-mfa-login/actions/workflows/build.yml) [![Lint](https://github.com/karlderkaefer/asdf-aws-mfa-login/actions/workflows/lint.yml/badge.svg)](https://github.com/karlderkaefer/asdf-aws-mfa-login/actions/workflows/lint.yml)
+# asdf-aws-mfa-login [![Build](https://github.com/signavio/asdf-aws-mfa-login/actions/workflows/build.yml/badge.svg)](https://github.com/signavio/asdf-aws-mfa-login/actions/workflows/build.yml) [![Lint](https://github.com/signavio/asdf-aws-mfa-login/actions/workflows/lint.yml/badge.svg)](https://github.com/signavio/asdf-aws-mfa-login/actions/workflows/lint.yml)
 
 
 [aws-mfa-login](https://github.com/signavio/aws-mfa-login) plugin for the [asdf version manager](https://asdf-vm.com).
